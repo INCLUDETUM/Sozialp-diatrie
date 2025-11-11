@@ -65,7 +65,7 @@
 </section>
 
 <style>
-/* Gesamtlayout */
+/* Grundlayout */
 .lehrstuhl-layout {
   font-family: system-ui, sans-serif;
   color: #222;
@@ -78,8 +78,8 @@
 .lehrstuhl-title {
   font-size: 1.8rem;
   color: #003366;
-  text-align: left;
   margin-bottom: 25px;
+  text-align: left;
 }
 
 /* Text + Bild */
@@ -88,13 +88,13 @@
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: stretch;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 .intro-text p {
   text-align: justify;
   line-height: 1.6;
-  margin-bottom: 0.7rem;
   font-size: 0.95rem;
+  margin-bottom: 0.7rem;
 }
 .intro-text a { color: #005c9e; text-decoration: none; }
 .intro-text a:hover { text-decoration: underline; }
@@ -105,16 +105,16 @@
   border-radius: 8px;
 }
 
-/* Professor Modul (kompakt) */
+/* Kompaktes Professorenmodul */
 .professor-module {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #f9fafb;
   border-radius: 8px;
-  padding: 16px 22px;
-  gap: 20px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  padding: 14px 18px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  gap: 18px;
 }
 
 .prof-left {
@@ -122,8 +122,8 @@
   text-align: center;
 }
 .prof-photo {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 6px;
@@ -136,6 +136,7 @@
 .prof-left p {
   font-size: 0.85rem;
   color: #555;
+  margin: 0;
 }
 .prof-links {
   display: flex;
@@ -146,7 +147,7 @@
 .prof-links img {
   width: 22px;
   height: 22px;
-  filter: grayscale(30%);
+  filter: grayscale(40%);
   transition: filter 0.2s, transform 0.2s;
 }
 .prof-links img:hover {
@@ -154,16 +155,19 @@
   transform: scale(1.1);
 }
 
-/* Google Scholar rechts (klein und ruhig) */
+/* Google Scholar Grafik kompakter und quer */
 .prof-right {
   flex: 1;
   text-align: center;
 }
 .prof-right img {
-  width: 90%;
-  max-width: 260px;
+  width: 85%;
+  max-width: 220px;
+  height: auto;
+  aspect-ratio: 3 / 1.2; /* Querformat */
   border-radius: 6px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  object-fit: contain;
 }
 .caption {
   font-size: 0.75rem;
@@ -180,6 +184,6 @@
 @media (max-width: 900px) {
   .intro-grid { grid-template-columns: 1fr; }
   .professor-module { flex-direction: column; text-align: center; }
-  .prof-right img { max-width: 200px; }
+  .prof-right img { max-width: 180px; }
 }
 </style>
