@@ -1,26 +1,31 @@
-<section class="lehrstuhl-section">
-  <div class="content-grid">
-    
-    <!-- 🧾 LEHRSTUHLTEXT -->
-    <div class="text-column">
-      <h1>Lehrstuhl für Sozialpädiatrie</h1>
+<section class="lehrstuhl-layout">
+
+  <!-- TITEL -->
+  <h1 class="lehrstuhl-title">Lehrstuhl für Sozialpädiatrie</h1>
+
+  <!-- TEXT + TEAMFOTO -->
+  <div class="intro-grid">
+    <div class="intro-text">
       <p>
         Der <strong>Lehrstuhl für Sozialpädiatrie</strong> an der <strong>Technischen Universität München</strong> ist der einzige seiner Art in Deutschland. 
         Lehrstuhlinhaber ist <strong>Prof. Dr. med. Volker Mall</strong> 
         (<a href="https://www.professoren.tum.de/mall-volker" target="_blank" rel="noopener">zum TUM Professoren Profil</a>), 
         der zugleich auch ärztlicher Direktor des kbo Kinderzentrums ist.
       </p>
+
       <p>
         Zentral für die Sozialpädiatrie als wissenschaftliche Disziplin ist es, neue Erkenntnisse zu Prävention, Behandlung und Rehabilitation zu schaffen 
         und in den klinischen Alltag zu integrieren. Das interdisziplinäre Team vereint Expertise aus Medizin, Psychologie, Pädagogik, 
         Sport- und Gesundheitswissenschaften sowie aus verschiedenen Therapieberufen.
       </p>
+
       <p>
         Die Forschungsschwerpunkte umfassen die Untersuchung psychosozialer und biologischer Bedingungen bei der Entstehung von Entwicklungsstörungen 
         und psychischen Erkrankungen, die Diagnostik und Therapie von Kindern mit Cerebralparese, mit posttraumatischer Belastungsstörung nach Fluchterfahrung, 
         mit Misshandlungserfahrung, mit frühkindlichen Regulationsproblemen (Schrei-, Schlaf- und Essstörungen) sowie mit verschiedenen Syndromen 
         und seltenen Erkrankungen.
       </p>
+
       <p>
         Zudem werden am Lehrstuhl digitale und verzahnte Behandlungsansätze erforscht, um Interventionen niedrigschwellig zu ergänzen und zu erweitern. 
         Darüber hinaus sind am Lehrstuhl Kinderschutzprojekte im Bereich der Frühen Hilfen, die Erforschung früher Eltern-Kind-Beziehungen und deren 
@@ -28,20 +33,27 @@
       </p>
     </div>
 
-    <!-- 👤 PROFESSOR-MODUL -->
-    <aside class="prof-card">
-      <img src="https://via.placeholder.com/180" alt="Prof. Dr. med. Volker Mall" class="prof-photo">
+    <div class="intro-image">
+      <img src="https://via.placeholder.com/700x450" alt="Teamfoto des Lehrstuhls für Sozialpädiatrie">
+    </div>
+  </div>
+
+  <!-- PROFESSOR MODUL -->
+  <div class="professor-module">
+    <div class="prof-left">
+      <img src="https://via.placeholder.com/140" alt="Prof. Dr. med. Volker Mall" class="prof-photo">
       <h3>Prof. Dr. med. Volker Mall</h3>
-      <p>Lehrstuhlinhaber<br><span>TU München</span></p>
-
+      <p>Lehrstuhlinhaber, TU München</p>
       <div class="prof-links">
+        <a href="https://www.researchgate.net/profile/Volker-Mall" target="_blank" title="ResearchGate"><img src="/icons/researchgate.svg" alt="ResearchGate"></a>
         <a href="mailto:volker.mall@tum.de" title="E-Mail"><img src="/icons/email.svg" alt="Mail"></a>
-        <a href="https://www.linkedin.com/in/volker-mall" title="LinkedIn"><img src="/icons/linkedin.svg" alt="LinkedIn"></a>
-        <a href="https://www.researchgate.net/profile/Volker-Mall" title="ResearchGate"><img src="/icons/researchgate.svg" alt="ResearchGate"></a>
-        <a href="/wp-content/uploads/CV_VolkerMall.pdf" title="CV" target="_blank"><img src="/icons/cv-icon.svg" alt="CV"></a>
+        <a href="/wp-content/uploads/CV_VolkerMall.pdf" target="_blank" title="CV"><img src="/icons/cv-icon.svg" alt="CV"></a>
+        <a href="https://www.linkedin.com/in/volker-mall" target="_blank" title="LinkedIn"><img src="/icons/linkedin.svg" alt="LinkedIn"></a>
       </div>
+    </div>
 
-      <button id="toggleScholar">📊 Forschungsstatistik anzeigen</button>
+    <div class="prof-right">
+      <button id="toggleScholar">📊 Google Scholar anzeigen</button>
       <div id="scholarPanel" class="hidden">
         <a href="https://scholar.google.com/citations?user=ZbUQ9OIAAAAJ&hl=de" target="_blank">
           <img src="/uploads/scholar-stats-2025.png" alt="Google Scholar Statistiken">
@@ -50,76 +62,94 @@
           Quelle: <a href="https://scholar.google.com/citations?user=ZbUQ9OIAAAAJ&hl=de" target="_blank">Google Scholar</a>
         </p>
       </div>
-    </aside>
+    </div>
   </div>
+
 </section>
 
 <style>
-/* Grundlayout */
-.lehrstuhl-section {
+/* Basislayout */
+.lehrstuhl-layout {
   font-family: system-ui, sans-serif;
   color: #222;
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
 }
-.content-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 40px;
-  align-items: start;
-}
-.text-column h1 {
+
+/* Titel */
+.lehrstuhl-title {
+  font-size: 2rem;
   color: #003366;
-  font-size: 1.8rem;
-  margin-bottom: 20px;
   text-align: left;
+  margin-bottom: 30px;
 }
-.text-column p {
+
+/* Text + Bild */
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: stretch;
+  margin-bottom: 50px;
+}
+.intro-text p {
   text-align: justify;
   line-height: 1.7;
-  color: #444;
   margin-bottom: 0.8rem;
 }
-.text-column a {
-  color: #005c9e;
-  text-decoration: none;
-}
-.text-column a:hover { text-decoration: underline; }
-
-/* Professorenkarte */
-.prof-card {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+.intro-text a { color: #005c9e; text-decoration: none; }
+.intro-text a:hover { text-decoration: underline; }
+.intro-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 10px;
-  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Professor Modul */
+.professor-module {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 20px 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.prof-left {
+  flex: 1;
+  min-width: 240px;
   text-align: center;
 }
 .prof-photo {
-  width: 140px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 10px;
 }
-.prof-card h3 {
+.prof-left h3 {
+  margin: 6px 0;
   color: #003366;
-  margin: 8px 0 4px;
 }
-.prof-card p {
-  color: #555;
+.prof-left p {
   font-size: 0.9rem;
-  margin: 2px 0 10px;
+  color: #555;
 }
 .prof-links {
   display: flex;
   justify-content: center;
-  gap: 8px;
-  margin-bottom: 10px;
+  gap: 10px;
+  margin-top: 8px;
 }
 .prof-links img {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   filter: grayscale(30%);
   transition: filter 0.2s, transform 0.2s;
 }
@@ -128,20 +158,26 @@
   transform: scale(1.1);
 }
 
-/* Scholar Toggle */
-.prof-card button {
+/* Scholar rechts */
+.prof-right {
+  flex: 1;
+  text-align: center;
+  min-width: 300px;
+}
+.prof-right button {
   background: none;
   border: none;
   color: #005c9e;
-  cursor: pointer;
   font-weight: 600;
-  margin-top: 8px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: color 0.2s;
 }
+.prof-right button:hover { color: #003366; }
 #scholarPanel.hidden { display: none; }
 #scholarPanel img {
   width: 100%;
-  max-width: 320px;
-  margin-top: 10px;
+  max-width: 400px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
@@ -158,8 +194,8 @@
 
 /* Responsive */
 @media (max-width: 900px) {
-  .content-grid { grid-template-columns: 1fr; }
-  .prof-card { max-width: 360px; margin: 20px auto 0; }
+  .intro-grid { grid-template-columns: 1fr; }
+  .professor-module { flex-direction: column; text-align: center; }
 }
 </style>
 
@@ -168,7 +204,7 @@ document.getElementById('toggleScholar').addEventListener('click', function() {
   const panel = document.getElementById('scholarPanel');
   panel.classList.toggle('hidden');
   this.textContent = panel.classList.contains('hidden')
-    ? '📊 Forschungsstatistik anzeigen'
-    : '📉 Forschungsstatistik ausblenden';
+    ? '📊 Google Scholar anzeigen'
+    : '📉 Google Scholar ausblenden';
 });
 </script>
