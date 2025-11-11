@@ -1,118 +1,165 @@
-<div class="prof-card">
-  <div class="prof-header">
-    <div>
-      <h3>Prof. Dr. med. Volker Mall</h3>
-      <p>Lehrstuhlinhaber für Sozialpädiatrie<br>TU München</p>
-      <p><a href="https://www.kbo-kindzentrum.de" target="_blank" class="secondary-link">Ärztlicher Direktor, kbo Kinderzentrum</a></p>
-    </div>
-    <div class="prof-icons">
-      <a href="mailto:volker.mall@tum.de" title="E-Mail"><img src="/icons/email.svg" alt="E-Mail"></a>
-      <a href="https://www.linkedin.com/in/volker-mall" title="LinkedIn"><img src="/icons/linkedin.svg" alt="LinkedIn"></a>
-      <a href="https://www.researchgate.net/profile/Volker-Mall" title="ResearchGate"><img src="/icons/researchgate.svg" alt="ResearchGate"></a>
-      <a href="/wp-content/uploads/CV_VolkerMall.pdf" title="CV" target="_blank"><img src="/icons/cv-icon.svg" alt="CV"></a>
-    </div>
-  </div>
-
-  <div class="scholar-toggle">
-    <button id="toggleScholar">📊 Forschungsstatistik anzeigen</button>
-    <div id="scholarPanel" class="hidden">
-      <a href="https://scholar.google.com/citations?user=ZbUQ9OIAAAAJ&hl=de" target="_blank">
-        <img src="/uploads/scholar-stats-2025.png" alt="Google Scholar Statistiken">
-      </a>
-      <p class="caption">
-        Aktuelle Daten auf 
-        <a href="https://scholar.google.com/citations?user=ZbUQ9OIAAAAJ&hl=de" target="_blank">Google Scholar</a>
+<section class="lehrstuhl-section">
+  <div class="content-grid">
+    
+    <!-- 🧾 LEHRSTUHLTEXT -->
+    <div class="text-column">
+      <h1>Lehrstuhl für Sozialpädiatrie</h1>
+      <p>
+        Der <strong>Lehrstuhl für Sozialpädiatrie</strong> an der <strong>Technischen Universität München</strong> ist der einzige seiner Art in Deutschland. 
+        Lehrstuhlinhaber ist <strong>Prof. Dr. med. Volker Mall</strong> 
+        (<a href="https://www.professoren.tum.de/mall-volker" target="_blank" rel="noopener">zum TUM Professoren Profil</a>), 
+        der zugleich auch ärztlicher Direktor des kbo Kinderzentrums ist.
+      </p>
+      <p>
+        Zentral für die Sozialpädiatrie als wissenschaftliche Disziplin ist es, neue Erkenntnisse zu Prävention, Behandlung und Rehabilitation zu schaffen 
+        und in den klinischen Alltag zu integrieren. Das interdisziplinäre Team vereint Expertise aus Medizin, Psychologie, Pädagogik, 
+        Sport- und Gesundheitswissenschaften sowie aus verschiedenen Therapieberufen.
+      </p>
+      <p>
+        Die Forschungsschwerpunkte umfassen die Untersuchung psychosozialer und biologischer Bedingungen bei der Entstehung von Entwicklungsstörungen 
+        und psychischen Erkrankungen, die Diagnostik und Therapie von Kindern mit Cerebralparese, mit posttraumatischer Belastungsstörung nach Fluchterfahrung, 
+        mit Misshandlungserfahrung, mit frühkindlichen Regulationsproblemen (Schrei-, Schlaf- und Essstörungen) sowie mit verschiedenen Syndromen 
+        und seltenen Erkrankungen.
+      </p>
+      <p>
+        Zudem werden am Lehrstuhl digitale und verzahnte Behandlungsansätze erforscht, um Interventionen niedrigschwellig zu ergänzen und zu erweitern. 
+        Darüber hinaus sind am Lehrstuhl Kinderschutzprojekte im Bereich der Frühen Hilfen, die Erforschung früher Eltern-Kind-Beziehungen und deren 
+        Bedeutung für die kindliche Entwicklung sowie die Entwicklung und Evaluation von Patientenschulungen für chronisch kranke Kinder und ihre Eltern verankert.
       </p>
     </div>
+
+    <!-- 👤 PROFESSOR-MODUL -->
+    <aside class="prof-card">
+      <img src="https://via.placeholder.com/180" alt="Prof. Dr. med. Volker Mall" class="prof-photo">
+      <h3>Prof. Dr. med. Volker Mall</h3>
+      <p>Lehrstuhlinhaber<br><span>TU München</span></p>
+
+      <div class="prof-links">
+        <a href="mailto:volker.mall@tum.de" title="E-Mail"><img src="/icons/email.svg" alt="Mail"></a>
+        <a href="https://www.linkedin.com/in/volker-mall" title="LinkedIn"><img src="/icons/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://www.researchgate.net/profile/Volker-Mall" title="ResearchGate"><img src="/icons/researchgate.svg" alt="ResearchGate"></a>
+        <a href="/wp-content/uploads/CV_VolkerMall.pdf" title="CV" target="_blank"><img src="/icons/cv-icon.svg" alt="CV"></a>
+      </div>
+
+      <button id="toggleScholar">📊 Forschungsstatistik anzeigen</button>
+      <div id="scholarPanel" class="hidden">
+        <a href="https://scholar.google.com/citations?user=ZbUQ9OIAAAAJ&hl=de" target="_blank">
+          <img src="/uploads/scholar-stats-2025.png" alt="Google Scholar Statistiken">
+        </a>
+        <p class="caption">
+          Quelle: <a href="https://scholar.google.com/citations?user=ZbUQ9OIAAAAJ&hl=de" target="_blank">Google Scholar</a>
+        </p>
+      </div>
+    </aside>
   </div>
-</div>
+</section>
 
 <style>
-.prof-card {
-  background: #f8fafc;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  padding: 18px 22px;
-  max-width: 480px;
+/* Grundlayout */
+.lehrstuhl-section {
   font-family: system-ui, sans-serif;
   color: #222;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
-.prof-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
+.content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: start;
 }
-.prof-header h3 {
-  margin: 0;
+.text-column h1 {
   color: #003366;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: left;
 }
-.prof-header p {
-  margin: 3px 0;
-  color: #555;
-  font-size: 0.9rem;
-  line-height: 1.3;
+.text-column p {
+  text-align: justify;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 0.8rem;
 }
-.secondary-link {
+.text-column a {
   color: #005c9e;
   text-decoration: none;
-  font-weight: 500;
 }
-.secondary-link:hover { text-decoration: underline; }
+.text-column a:hover { text-decoration: underline; }
 
-.prof-icons a img {
+/* Professorenkarte */
+.prof-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+.prof-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.prof-card h3 {
+  color: #003366;
+  margin: 8px 0 4px;
+}
+.prof-card p {
+  color: #555;
+  font-size: 0.9rem;
+  margin: 2px 0 10px;
+}
+.prof-links {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.prof-links img {
   width: 24px;
   height: 24px;
-  margin-left: 8px;
   filter: grayscale(30%);
   transition: filter 0.2s, transform 0.2s;
 }
-.prof-icons a img:hover {
+.prof-links img:hover {
   filter: grayscale(0%);
   transform: scale(1.1);
 }
 
-/* Scholar-Toggle */
-.scholar-toggle {
-  margin-top: 14px;
-}
-.scholar-toggle button {
+/* Scholar Toggle */
+.prof-card button {
   background: none;
   border: none;
   color: #005c9e;
-  font-weight: 600;
   cursor: pointer;
-  padding: 0;
-  font-size: 0.95rem;
-  transition: color 0.2s;
+  font-weight: 600;
+  margin-top: 8px;
 }
-.scholar-toggle button:hover {
-  color: #003366;
-}
-#scholarPanel {
-  margin-top: 10px;
-  text-align: center;
-}
-#scholarPanel.hidden {
-  display: none;
-}
+#scholarPanel.hidden { display: none; }
 #scholarPanel img {
   width: 100%;
-  max-width: 420px;
+  max-width: 320px;
+  margin-top: 10px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 .caption {
   font-size: 0.8rem;
   color: #666;
-  margin-top: 6px;
+  margin-top: 4px;
 }
 .caption a {
   color: #005c9e;
   text-decoration: none;
 }
-.caption a:hover {
-  text-decoration: underline;
+.caption a:hover { text-decoration: underline; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .content-grid { grid-template-columns: 1fr; }
+  .prof-card { max-width: 360px; margin: 20px auto 0; }
 }
 </style>
 
