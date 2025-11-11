@@ -53,22 +53,19 @@
     </div>
 
     <div class="prof-right">
-      <button id="toggleScholar">📊 Google Scholar anzeigen</button>
-      <div id="scholarPanel" class="hidden">
-        <a href="https://scholar.google.com/citations?user=ZbUQ9OIAAAAJ&hl=de" target="_blank">
-          <img src="https://baseresourcesstack-documentsbucket9ec9deb9-qmmkdw8bfxhu.s3.eu-central-1.amazonaws.com/public/videos/Website/Bildschirmfoto+2025-11-11+um+17.42.05.png" alt="Google Scholar Statistiken">
-        </a>
-        <p class="caption">
-          Quelle: <a href="https://scholar.google.com/citations?user=ZbUQ9OIAAAAJ&hl=de&oi=ao" target="_blank">Google Scholar</a>
-        </p>
-      </div>
+      <a href="https://scholar.google.com/citations?user=ZbUQ9OIAAAAJ&hl=de&oi=ao" target="_blank">
+        <img src="https://baseresourcesstack-documentsbucket9ec9deb9-qmmkdw8bfxhu.s3.eu-central-1.amazonaws.com/public/videos/Website/Bildschirmfoto+2025-11-11+um+17.42.05.png" alt="Google Scholar Statistiken">
+      </a>
+      <p class="caption">
+        Quelle: <a href="https://scholar.google.com/citations?user=ZbUQ9OIAAAAJ&hl=de&oi=ao" target="_blank">Google Scholar</a>
+      </p>
     </div>
   </div>
 
 </section>
 
 <style>
-/* Basislayout */
+/* Gesamtlayout */
 .lehrstuhl-layout {
   font-family: system-ui, sans-serif;
   color: #222;
@@ -79,10 +76,10 @@
 
 /* Titel */
 .lehrstuhl-title {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #003366;
   text-align: left;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 /* Text + Bild */
@@ -91,12 +88,13 @@
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: stretch;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 .intro-text p {
   text-align: justify;
-  line-height: 1.7;
-  margin-bottom: 0.8rem;
+  line-height: 1.6;
+  margin-bottom: 0.7rem;
+  font-size: 0.95rem;
 }
 .intro-text a { color: #005c9e; text-decoration: none; }
 .intro-text a:hover { text-decoration: underline; }
@@ -104,52 +102,50 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
 }
 
-/* Professor Modul */
+/* Professor Modul (kompakt) */
 .professor-module {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  background: #f8fafc;
-  border-radius: 10px;
-  padding: 20px 25px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  flex-wrap: wrap;
+  align-items: center;
+  background: #f9fafb;
+  border-radius: 8px;
+  padding: 16px 22px;
   gap: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
 }
 
 .prof-left {
   flex: 1;
-  min-width: 240px;
   text-align: center;
 }
 .prof-photo {
-  width: 120px;
-  height: 120px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 .prof-left h3 {
-  margin: 6px 0;
+  margin: 4px 0;
   color: #003366;
+  font-size: 1rem;
 }
 .prof-left p {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #555;
 }
 .prof-links {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-top: 8px;
+  gap: 8px;
+  margin-top: 6px;
 }
 .prof-links img {
-  width: 26px;
-  height: 26px;
+  width: 22px;
+  height: 22px;
   filter: grayscale(30%);
   transition: filter 0.2s, transform 0.2s;
 }
@@ -158,31 +154,19 @@
   transform: scale(1.1);
 }
 
-/* Scholar rechts */
+/* Google Scholar rechts (klein und ruhig) */
 .prof-right {
   flex: 1;
   text-align: center;
-  min-width: 300px;
 }
-.prof-right button {
-  background: none;
-  border: none;
-  color: #005c9e;
-  font-weight: 600;
-  cursor: pointer;
-  margin-bottom: 8px;
-  transition: color 0.2s;
-}
-.prof-right button:hover { color: #003366; }
-#scholarPanel.hidden { display: none; }
-#scholarPanel img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+.prof-right img {
+  width: 90%;
+  max-width: 260px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
 .caption {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: #666;
   margin-top: 4px;
 }
@@ -196,15 +180,6 @@
 @media (max-width: 900px) {
   .intro-grid { grid-template-columns: 1fr; }
   .professor-module { flex-direction: column; text-align: center; }
+  .prof-right img { max-width: 200px; }
 }
 </style>
-
-<script>
-document.getElementById('toggleScholar').addEventListener('click', function() {
-  const panel = document.getElementById('scholarPanel');
-  panel.classList.toggle('hidden');
-  this.textContent = panel.classList.contains('hidden')
-    ? '📊 Google Scholar anzeigen'
-    : '📉 Google Scholar ausblenden';
-});
-</script>
